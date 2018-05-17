@@ -1,8 +1,8 @@
 
 
 #define SERVO_BALL_pin 5
-#define BTN_START_pin 7
-#define BTN_LVL_pin 8
+#define BTN_LVL_pin 7
+#define BTN_START_pin 8
 
 uint8_t GAME_BALLS_COUNT_max = 1;
 uint8_t GAME_BALLS_COUNT_curr = 1;

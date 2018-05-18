@@ -12,9 +12,9 @@ bool GAME_isOn = false;
 uint8_t LVL_balls_count[3] = {6, 8, 10};
 
 uint16_t LVL_delays[3][30] = {
-  { 5000, 5000, 3000, 1000, 0, 0 },
-  {2000, 1000, 1000, 0, 0, 0, 0, 0},
-  {2000, 2000, 1000, 1000, 1000, 0, 0, 0, 0, 0}
+  {0, 5000, 3000, 2000, 0, 0},
+  {0, 2000, 0, 0, 0, 0, 0, 0},
+  {0, 2000, 0, 0, 0, 0, 0, 0, 0, 0}
 };
 
 /*= [2000, 2000, 2000, 2000, 2000, 1000, 1000, 1000, 0, 0]; //size= LVL_1_balls_count
@@ -40,7 +40,7 @@ extern uint8_t SmallFont[]; //6*86
 extern uint8_t BigNumbers[]; //14*24
 
 void setup() {
-  delay(2000);  
+  delay(2000);
   SERVO_init();
   BUTTON_init();
   OLED_init();

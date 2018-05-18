@@ -4,8 +4,8 @@ void SERVO_init() {
 }
 
 void SERVO_BALL_push() {
-  SERVO_BALL.write(25);
-  delay(500);
+  SERVO_BALL.write(40);
+  delay(450);
   SERVO_BALL.write(150);
-  delay(500);
+  delay(450);
 }

@@ -14,15 +14,19 @@ void BUTTON_check() {
       GAME_BALLS_COUNT_curr = 0;
       GAME_BALLS_COUNT_max = LVL_balls_count[GAME_LVL];
       GAME_isOn = true;
-      Serial.println("GAME ON");
-
-      Serial.print("GAME_LVL=");
-      Serial.println(GAME_LVL, DEC);
-
-      Serial.print("GAME_BALLS_COUNT_max=");
-      Serial.println(GAME_BALLS_COUNT_max, DEC);
     }
   }
 
+  //lvl game
+  button_state = digitalRead(BTN_LVL_pin);
+  if (!button_state) {
+    if (!GAME_isOn) {
+      GAME_LVL++;
+      if (GAME_LVL > 2) {
+        GAME_LVL = 0;
+      }
+      GAME_BALLS_COUNT_max = LVL_balls_count[GAME_LVL];
+    }
+  }
 
 }

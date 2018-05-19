@@ -12,7 +12,7 @@ bool GAME_isOn = false;
 uint8_t LVL_balls_count[3] = {6, 8, 10};
 
 uint16_t LVL_delays[3][30] = {
-  {0, 5000, 3000, 2000, 0, 0},
+  {0, 2000, 2000, 0, 0, 0},
   {0, 2000, 0, 0, 0, 0, 0, 0},
   {0, 2000, 0, 0, 0, 0, 0, 0, 0, 0}
 };
@@ -26,7 +26,6 @@ uint16_t LVL_delays[3][30] = {
 #include <Servo.h>
 Servo SERVO_BALL;
 uint32_t SERVO_BALL_prevTime = 0L;
-
 
 //================================== TIMEMACHINE =================================================================
 uint32_t TS_prev_21ms = 0L;

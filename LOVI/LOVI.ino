@@ -1,6 +1,6 @@
 
-
-#define SERVO_BALL_pin 5
+#define SERVO_BALL_1_pin 4
+#define SERVO_BALL_2_pin 5
 #define BTN_LVL_pin 7
 #define BTN_START_pin 8
 
@@ -12,9 +12,9 @@ bool GAME_isOn = false;
 uint8_t LVL_balls_count[3] = {6, 8, 10};
 
 uint16_t LVL_delays[3][30] = {
-  {0, 2000, 2000, 0, 0, 0},
-  {0, 2000, 0, 0, 0, 0, 0, 0},
-  {0, 2000, 0, 0, 0, 0, 0, 0, 0, 0}
+  {0, 2000, 2000, 2000, 2000, 2000},
+  {0, 2000, 2000, 2000, 2000, 2000, 2000, 2000},
+  {0, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000}
 };
 
 /*= [2000, 2000, 2000, 2000, 2000, 1000, 1000, 1000, 0, 0]; //size= LVL_1_balls_count
@@ -24,7 +24,8 @@ uint16_t LVL_delays[3][30] = {
 
 //=================================== SERVO ball ==================================================================
 #include <Servo.h>
-Servo SERVO_BALL;
+Servo SERVO_BALL_1;
+Servo SERVO_BALL_2;
 uint32_t SERVO_BALL_prevTime = 0L;
 
 //================================== TIMEMACHINE =================================================================
